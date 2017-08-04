@@ -1,16 +1,16 @@
 {
-  "name": "h5p-boilerplate",
+  "name": "h5p-typescript-boilerplate",
   "version": "1.0.0",
   "description": "Example H5P Content Type for getting started",
   "private": true,
   "scripts": {
     "test": "ava",
-    "build": "cross-env NODE_ENV='production' webpack -p",
+    "build": "cross-env NODE_ENV='development' webpack",
     "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/h5p/h5p-boilerplate.git"
+    "url": "git+https://github.com/sr258/h5p-typescript-boilerplate.git"
   },
   "keywords": [
     "h5p",
@@ -19,6 +19,7 @@
   "author": "Joubel",
   "license": "MIT",
   "devDependencies": {
+    "@types/jquery": "^1.10.33",
     "ava": "^0.19.1",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
@@ -28,6 +29,8 @@
     "cross-env": "^4.0.0",
     "css-loader": "^0.26.2",
     "style-loader": "^0.13.2",
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2",
     "webpack": "^2.2.1"
   }
 }

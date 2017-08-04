@@ -5,7 +5,7 @@
   "minorVersion": 0,
   "patchVersion": 0,
   "runnable": 1,
-  "author": "Joubel",
+  "author": "S. Rettig, Joubel",
   "license": "MIT",
   "machineName": "H5P.HelloWorld",
   "embedTypes": [

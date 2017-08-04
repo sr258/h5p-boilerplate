@@ -4,7 +4,7 @@ var isDev = (nodeEnv !== 'production');
 
 var config = {
   entry: {
-    dist: './src/entries/dist.js'
+    dist: './src/entries/dist.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -21,8 +21,16 @@ var config = {
         test: /\.css$/,
         include: path.resolve(__dirname, 'src'),
         use: ['style-loader', 'css-loader']
-      }
+      },
+       {
+       test: /\.tsx?$/,
+       use: 'ts-loader',
+       exclude: /node_modules/
+     }
     ]
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"]
   }
 };
 
