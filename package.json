@@ -6,7 +6,10 @@
   "scripts": {
     "test": "ava",
     "build": "cross-env NODE_ENV='development' webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "dist": "cp library.json dist && cp semantics.json dist",
+    "deploy": "rsync -vaz --delete --rsh=\"ssh -l bitnami\" dist 192.168.188.45:~/h5p_dev",
+    "build+deploy": "npm run build && npm run deploy"
   },
   "repository": {
     "type": "git",
